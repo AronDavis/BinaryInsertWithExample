@@ -15,37 +15,49 @@ namespace WindowsFormsApplication1
             iterations = its;
         }
 
+        int maxValue, minValue, pivotValue;
+        int insertBefore; //index we'll insert our item into
+        bool foundPlace; //used to control the main loop
+        int min; //min index of our current search progress
+        int max; //max index of our current search progress
+        int pivot; //midway between min and max
         void Insert(int value)
         {
-            int insertBefore = 0; //index we'll insert our item into
+            insertBefore = 0; //index we'll insert our item into
             
-            bool foundPlace = false; //used to control the main loop
+            foundPlace = false; //used to control the main loop
 
-            int min = 0; //min index of our current search progress
-            int max = list.Count - 1; //max index of our current search progress
-
-            int pivot; //midway between min and max
+            min = 0; //min index of our current search progress
+            max = list.Count - 1; //max index of our current search progress
 
             //Handle list with 0 items
             if (max < 0) foundPlace = true;
+
+
+            
 
             while (foundPlace == false)
             {
                 //Get the midway point between min and max
                 pivot = (int)Math.Floor((max - min) / 2f) + min;
 
+                minValue = list[min];
+                maxValue = list[max];
+                pivotValue = list[pivot];
+
+
                 //if our value lies between the values of the min and max positions
-                if (list[min] < value && value < list[max])
+                if (minValue < value && value < maxValue)
                 {
                     //compare our value to the pivot value
 
                     //if our value is less than the pivot value
-                    if (value < list[pivot])
+                    if (value < pivotValue)
                     {
                         //our current known max must be <= pivot
                         max = pivot;
                     }
-                    else if (value > list[pivot]) //value is greater than pivot value
+                    else if (value > pivotValue) //value is greater than pivot value
                     {
                         //our current known min must be >= pivot
                         min = pivot;
@@ -60,13 +72,13 @@ namespace WindowsFormsApplication1
                     if (max - min <= 2)
                     {
                         //if our value is less than the min value 
-                        if (value <= list[min])
+                        if (value <= minValue)
                         {
                             //it goes before min
                             foundPlace = true;
                             insertBefore = min;
                         }
-                        else if (value > list[max])//value is greater than max
+                        else if (value > maxValue)//value is greater than max
                         {
                             //it goes after max
                             foundPlace = true;
@@ -90,13 +102,13 @@ namespace WindowsFormsApplication1
                         }
                     }
                 }
-                else if (value <= list[min])//value is less than or equal to min value
+                else if (value <= minValue)//value is less than or equal to min value
                 {
                     //it goes before min
                     foundPlace = true;
                     insertBefore = min;
                 }
-                else if (value >= list[max])//value is greater than or equal to max value
+                else if (value >= maxValue)//value is greater than or equal to max value
                 {
                     //it goes after max
                     foundPlace = true;

@@ -7,3 +7,12 @@ C:\Users\arond\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\Deb
 C:\Users\arond\AppData\Local\Temporary Projects\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 C:\Users\arond\AppData\Local\Temporary Projects\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
 C:\Users\arond\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\arond\Documents\GitHub\BinaryInsert\BinaryInsertWithExample\BinaryInsertWithExample\bin\Debug\BinaryInsertWithExample.exe
+C:\Users\arond\Documents\GitHub\BinaryInsert\BinaryInsertWithExample\BinaryInsertWithExample\bin\Debug\BinaryInsertWithExample.pdb
+C:\Users\arond\Documents\GitHub\BinaryInsert\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\arond\Documents\GitHub\BinaryInsert\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\WindowsFormsApplication1.MainForm.resources
+C:\Users\arond\Documents\GitHub\BinaryInsert\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\arond\Documents\GitHub\BinaryInsert\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\BinaryInsertWithExample.csproj.GenerateResource.Cache
+C:\Users\arond\Documents\GitHub\BinaryInsert\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\BinaryInsertWithExample.exe.licenses
+C:\Users\arond\Documents\GitHub\BinaryInsert\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\BinaryInsertWithExample.exe
+C:\Users\arond\Documents\GitHub\BinaryInsert\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\BinaryInsertWithExample.pdb
