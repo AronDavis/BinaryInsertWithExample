@@ -60,6 +60,7 @@ namespace WindowsFormsApplication1
                     {
                         foundPlace = true;
                         insertBefore = pivot;
+                        break;
                     }
 
                     //if there are <= 1 values between min and max

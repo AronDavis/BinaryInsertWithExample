@@ -55,7 +55,7 @@ namespace WindowsFormsApplication1
                     lbDisplay.Items.Add(bi.list[i]);
                 }
             }
-            
+
         }
     }
 }

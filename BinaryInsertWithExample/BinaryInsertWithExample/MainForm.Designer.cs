@@ -36,7 +36,7 @@
             // btnProveIt
             // 
             this.btnProveIt.Location = new System.Drawing.Point(16, 300);
-            this.btnProveIt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProveIt.Margin = new System.Windows.Forms.Padding(4);
             this.btnProveIt.Name = "btnProveIt";
             this.btnProveIt.Size = new System.Drawing.Size(347, 28);
             this.btnProveIt.TabIndex = 0;
@@ -49,7 +49,7 @@
             this.lbDisplay.FormattingEnabled = true;
             this.lbDisplay.ItemHeight = 16;
             this.lbDisplay.Location = new System.Drawing.Point(16, 15);
-            this.lbDisplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbDisplay.Margin = new System.Windows.Forms.Padding(4);
             this.lbDisplay.Name = "lbDisplay";
             this.lbDisplay.Size = new System.Drawing.Size(345, 244);
             this.lbDisplay.TabIndex = 2;
@@ -57,12 +57,12 @@
             // txtIterations
             // 
             this.txtIterations.Location = new System.Drawing.Point(17, 268);
-            this.txtIterations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIterations.Margin = new System.Windows.Forms.Padding(4);
             this.txtIterations.MaxLength = 20;
             this.txtIterations.Name = "txtIterations";
             this.txtIterations.Size = new System.Drawing.Size(344, 22);
             this.txtIterations.TabIndex = 3;
-            this.txtIterations.Text = "50000";
+            this.txtIterations.Text = "10000";
             // 
             // MainForm
             // 
@@ -72,7 +72,7 @@
             this.Controls.Add(this.txtIterations);
             this.Controls.Add(this.lbDisplay);
             this.Controls.Add(this.btnProveIt);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "Binary Insert";
             this.ResumeLayout(false);
