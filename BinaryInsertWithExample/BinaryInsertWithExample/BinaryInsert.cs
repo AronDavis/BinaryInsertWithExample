@@ -31,9 +31,6 @@ namespace WindowsFormsApplication1
             //used to control the main loop
             foundPlace = max < 0; //Set to true if list is empty
 
-            
-            if (max < 0) foundPlace = true;
-
             while (!foundPlace)
             {
                 //Get the midway point between min and max
@@ -65,22 +62,24 @@ namespace WindowsFormsApplication1
                         insertBefore = pivot;
                     }
 
-                    //if there are <= 1 values between min and max
-                    if (max - min <= 2)
+                    //if there are 0 or 1 values between min and max
+                    switch(max-min)
                     {
-                        foundPlace = true;
-
-                        //if there is a middle value between min and max AND our value is less than or equal to the middle value
-                        if (max - min == 2 && value <= pivotValue)
-                        {
-                            //it goes before middle value
-                            insertBefore = max - 1;
-                        }
-                        else
-                        {
-                            //it goes before max
+                        case 1:
+                            foundPlace = true;
                             insertBefore = max;
-                        }
+                            break;
+                        case 2:
+                            //there is a middle value between min and max
+                            foundPlace = true;
+
+                            //if our value is less than or equal to the middle value
+                            if (value <= pivotValue)
+                            {
+                                //it goes before middle value
+                                insertBefore = max - 1;
+                            }
+                            break;
                     }
                 }
                 else if (value <= minValue) //value is less than or equal to min value
