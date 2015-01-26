@@ -35,10 +35,9 @@
             // 
             // btnProveIt
             // 
-            this.btnProveIt.Location = new System.Drawing.Point(16, 300);
-            this.btnProveIt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProveIt.Location = new System.Drawing.Point(12, 244);
             this.btnProveIt.Name = "btnProveIt";
-            this.btnProveIt.Size = new System.Drawing.Size(347, 28);
+            this.btnProveIt.Size = new System.Drawing.Size(260, 23);
             this.btnProveIt.TabIndex = 0;
             this.btnProveIt.Text = "Prove It!";
             this.btnProveIt.UseVisualStyleBackColor = true;
@@ -47,33 +46,29 @@
             // lbDisplay
             // 
             this.lbDisplay.FormattingEnabled = true;
-            this.lbDisplay.ItemHeight = 16;
-            this.lbDisplay.Location = new System.Drawing.Point(16, 15);
-            this.lbDisplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbDisplay.Location = new System.Drawing.Point(12, 12);
             this.lbDisplay.Name = "lbDisplay";
-            this.lbDisplay.Size = new System.Drawing.Size(345, 244);
+            this.lbDisplay.Size = new System.Drawing.Size(260, 199);
             this.lbDisplay.TabIndex = 2;
             // 
             // txtIterations
             // 
-            this.txtIterations.Location = new System.Drawing.Point(17, 268);
-            this.txtIterations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIterations.Location = new System.Drawing.Point(13, 218);
             this.txtIterations.MaxLength = 20;
             this.txtIterations.Name = "txtIterations";
-            this.txtIterations.Size = new System.Drawing.Size(344, 22);
+            this.txtIterations.Size = new System.Drawing.Size(259, 20);
             this.txtIterations.TabIndex = 3;
-            this.txtIterations.Text = "50000";
+            this.txtIterations.Text = "5000";
             // 
-            // MainForm
+            // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 338);
+            this.ClientSize = new System.Drawing.Size(284, 275);
             this.Controls.Add(this.txtIterations);
             this.Controls.Add(this.lbDisplay);
             this.Controls.Add(this.btnProveIt);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "MainForm";
+            this.Name = "Form1";
             this.Text = "Binary Insert";
             this.ResumeLayout(false);
             this.PerformLayout();

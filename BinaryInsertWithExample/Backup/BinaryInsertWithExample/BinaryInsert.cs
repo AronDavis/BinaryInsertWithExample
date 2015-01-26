@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1
     {
         public List<int> list;
         public int iterations;
-        public System.Diagnostics.Stopwatch timeElapsed;
+        public TimeSpan timeElapsed;
 
         public void Start(int its)
         {
@@ -33,14 +33,18 @@ namespace WindowsFormsApplication1
             //Handle list with 0 items
             if (max < 0) foundPlace = true;
 
-            while (!foundPlace)
+
+            
+
+            while (foundPlace == false)
             {
                 //Get the midway point between min and max
-                pivot = (max + min) / 2;
+                pivot = (int)Math.Floor((max - min) / 2f) + min;
 
                 minValue = list[min];
                 maxValue = list[max];
                 pivotValue = list[pivot];
+
 
                 //if our value lies between the values of the min and max positions
                 if (minValue < value && value < maxValue)
@@ -67,28 +71,44 @@ namespace WindowsFormsApplication1
                     //if there are <= 1 values between min and max
                     if (max - min <= 2)
                     {
-                        foundPlace = true;
-
-                        //if there is a middle value between min and max AND our value is less than or equal to the middle value
-                        if (max - min == 2 && value <= pivotValue)
+                        //if our value is less than the min value 
+                        if (value <= minValue)
                         {
-                            //it goes before middle value
-                            insertBefore = max - 1;
+                            //it goes before min
+                            foundPlace = true;
+                            insertBefore = min;
                         }
-                        else
+                        else if (value > maxValue)//value is greater than max
                         {
-                            //it goes before max
-                            insertBefore = max;
+                            //it goes after max
+                            foundPlace = true;
+                            insertBefore = max + 1;
+                        }
+                        else //value is greater than min value and less than max value
+                        {
+                            foundPlace = true;
+
+                            //if there is a middle value between min and max AND our value is less than or equal to max
+                            if (max - min == 2 && value <= list[max - 1])
+                            {
+                                //it goes before middle value
+                                insertBefore = max - 1;
+                            }
+                            else
+                            {
+                                //it goes before max
+                                insertBefore = max;
+                            }
                         }
                     }
                 }
-                else if (value <= minValue) //value is less than or equal to min value
+                else if (value <= minValue)//value is less than or equal to min value
                 {
                     //it goes before min
                     foundPlace = true;
                     insertBefore = min;
                 }
-                else if (value >= maxValue) //value is greater than or equal to max value
+                else if (value >= maxValue)//value is greater than or equal to max value
                 {
                     //it goes after max
                     foundPlace = true;
@@ -110,15 +130,16 @@ namespace WindowsFormsApplication1
         public void StartValidate()
         {
             Random r = new Random();
-            
-            timeElapsed = new System.Diagnostics.Stopwatch();
 
-            timeElapsed.Start();
+            
+            DateTime startInsert = DateTime.Now;
             for (int i = 0; i < iterations; i++)
             {
                 Insert(r.Next(-iterations, iterations));
             }
-            timeElapsed.Stop();
+            DateTime endInsert = DateTime.Now;
+
+            timeElapsed = endInsert.Subtract(startInsert);
         }
 
         public void EndValidate()

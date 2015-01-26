@@ -30,6 +30,10 @@ namespace WindowsFormsApplication1
                     MessageBox.Show("Iterations must be a number greater than zero!");
                     return;
                 }
+                else if (iterations > 400000)
+                {
+                    MessageBox.Show("Please keep your iterations to 400,000 or lower.");
+                }
             }
             catch
             {
@@ -38,7 +42,7 @@ namespace WindowsFormsApplication1
             }
             bi.Start(iterations);
             bi.StartValidate();
-            DialogResult dr = MessageBox.Show("It took " + bi.timeElapsed.Elapsed.TotalSeconds
+            DialogResult dr = MessageBox.Show("It took " + bi.timeElapsed.TotalSeconds
                 + " seconds to insert " + bi.iterations
                 + " values into an originally empty list."
                 + Environment.NewLine

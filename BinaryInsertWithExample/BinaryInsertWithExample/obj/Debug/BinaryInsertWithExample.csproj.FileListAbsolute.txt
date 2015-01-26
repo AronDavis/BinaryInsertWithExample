@@ -16,3 +16,12 @@ C:\Users\arond\Documents\GitHub\BinaryInsert\BinaryInsertWithExample\BinaryInser
 C:\Users\arond\Documents\GitHub\BinaryInsert\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\BinaryInsertWithExample.exe.licenses
 C:\Users\arond\Documents\GitHub\BinaryInsert\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\BinaryInsertWithExample.exe
 C:\Users\arond\Documents\GitHub\BinaryInsert\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\BinaryInsertWithExample.pdb
+C:\Users\Aron\Documents\GitHub\BinaryInsertWithExample\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\BinaryInsertWithExample.exe
+C:\Users\Aron\Documents\GitHub\BinaryInsertWithExample\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\BinaryInsertWithExample.pdb
+C:\Users\Aron\Documents\GitHub\BinaryInsertWithExample\BinaryInsertWithExample\BinaryInsertWithExample\bin\Debug\BinaryInsertWithExample.exe
+C:\Users\Aron\Documents\GitHub\BinaryInsertWithExample\BinaryInsertWithExample\BinaryInsertWithExample\bin\Debug\BinaryInsertWithExample.pdb
+C:\Users\Aron\Documents\GitHub\BinaryInsertWithExample\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\BinaryInsertWithExample.csprojResolveAssemblyReference.cache
+C:\Users\Aron\Documents\GitHub\BinaryInsertWithExample\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\WindowsFormsApplication1.MainForm.resources
+C:\Users\Aron\Documents\GitHub\BinaryInsertWithExample\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Aron\Documents\GitHub\BinaryInsertWithExample\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\BinaryInsertWithExample.csproj.GenerateResource.Cache
+C:\Users\Aron\Documents\GitHub\BinaryInsertWithExample\BinaryInsertWithExample\BinaryInsertWithExample\obj\Debug\BinaryInsertWithExample.exe.licenses
