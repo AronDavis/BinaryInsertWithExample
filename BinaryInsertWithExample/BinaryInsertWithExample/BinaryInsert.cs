@@ -63,24 +63,19 @@ namespace WindowsFormsApplication1
                         break;
                     }
 
-                    //if there are <= 1 values between min and max
-                    if (max - min <= 2)
+                    switch(max-min)
                     {
-                        foundPlace = true;
+                        case 1:
+                            foundPlace = true;
+                            insertBefore = max; //it goes before max
+                            break;
+                        case 2:
+                            foundPlace = true;
 
-                        //if there is a middle value between min and max AND our value is less than or equal to max
-                        if (max - min == 2 && value <= list[max - 1])
-                        {
-                            //it goes before middle value
-                            insertBefore = max - 1;
-                        }
-                        else
-                        {
-                            //it goes before max
-                            insertBefore = max;
-                        }
+                            if (value <= list[max - 1]) insertBefore = max - 1; //it goes before middle value
+                            else insertBefore = max; //it goes before max
+                            break;
                     }
-
                 }
                 else if (value <= minValue) //value is less than or equal to min value
                 {
