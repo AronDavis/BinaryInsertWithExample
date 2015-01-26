@@ -24,13 +24,14 @@ namespace WindowsFormsApplication1
         void Insert(int value)
         {
             insertBefore = 0; //index we'll insert our item into
-            
-            foundPlace = false; //used to control the main loop
 
             min = 0; //min index of our current search progress
             max = list.Count - 1; //max index of our current search progress
 
-            //Handle list with 0 items
+            //used to control the main loop
+            foundPlace = max < 0; //Set to true if list is empty
+
+            
             if (max < 0) foundPlace = true;
 
             while (!foundPlace)
