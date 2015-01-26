@@ -62,25 +62,24 @@ namespace WindowsFormsApplication1
                         insertBefore = pivot;
                     }
 
-                    //if there are 0 or 1 values between min and max
-                    switch(max-min)
+                    //if there are <= 1 values between min and max
+                    if (max - min <= 2)
                     {
-                        case 1:
-                            foundPlace = true;
-                            insertBefore = max;
-                            break;
-                        case 2:
-                            //there is a middle value between min and max
-                            foundPlace = true;
+                        foundPlace = true;
 
-                            //if our value is less than or equal to the middle value
-                            if (value <= pivotValue)
-                            {
-                                //it goes before middle value
-                                insertBefore = max - 1;
-                            }
-                            break;
+                        //if there is a middle value between min and max AND our value is less than or equal to max
+                        if (max - min == 2 && value <= list[max - 1])
+                        {
+                            //it goes before middle value
+                            insertBefore = max - 1;
+                        }
+                        else
+                        {
+                            //it goes before max
+                            insertBefore = max;
+                        }
                     }
+
                 }
                 else if (value <= minValue) //value is less than or equal to min value
                 {
