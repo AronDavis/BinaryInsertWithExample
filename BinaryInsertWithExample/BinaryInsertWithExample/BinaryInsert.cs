@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1
     {
         public List<int> list;
         public int iterations;
-        public TimeSpan timeElapsed;
+        public System.Diagnostics.Stopwatch timeElapsed;
 
         public void Start(int its)
         {
@@ -33,21 +33,28 @@ namespace WindowsFormsApplication1
             //Handle list with 0 items
             if (max < 0) foundPlace = true;
 
-
-            
-
-            while (foundPlace == false)
+            while (!foundPlace)
             {
                 //Get the midway point between min and max
-                pivot = (int)Math.Floor((max - min) / 2f) + min;
+                pivot = (max + min) / 2;
 
                 minValue = list[min];
                 maxValue = list[max];
                 pivotValue = list[pivot];
 
-
-                //if our value lies between the values of the min and max positions
-                if (minValue < value && value < maxValue)
+                if (value <= minValue)//value is less than or equal to min value
+                {
+                    //it goes before min
+                    foundPlace = true;
+                    insertBefore = min;
+                }
+                else if (value >= maxValue)//value is greater than or equal to max value
+                {
+                    //it goes after max
+                    foundPlace = true;
+                    insertBefore = max + 1;
+                }
+                else //if our value lies between the values of the min and max positions
                 {
                     //compare our value to the pivot value
 
@@ -102,18 +109,6 @@ namespace WindowsFormsApplication1
                         }
                     }
                 }
-                else if (value <= minValue)//value is less than or equal to min value
-                {
-                    //it goes before min
-                    foundPlace = true;
-                    insertBefore = min;
-                }
-                else if (value >= maxValue)//value is greater than or equal to max value
-                {
-                    //it goes after max
-                    foundPlace = true;
-                    insertBefore = max + 1;
-                }
             }
 
             //if our value should go at the end
@@ -130,16 +125,15 @@ namespace WindowsFormsApplication1
         public void StartValidate()
         {
             Random r = new Random();
-
             
-            DateTime startInsert = DateTime.Now;
+            timeElapsed = new System.Diagnostics.Stopwatch();
+
+            timeElapsed.Start();
             for (int i = 0; i < iterations; i++)
             {
                 Insert(r.Next(-iterations, iterations));
             }
-            DateTime endInsert = DateTime.Now;
-
-            timeElapsed = endInsert.Subtract(startInsert);
+            timeElapsed.Stop();
         }
 
         public void EndValidate()
