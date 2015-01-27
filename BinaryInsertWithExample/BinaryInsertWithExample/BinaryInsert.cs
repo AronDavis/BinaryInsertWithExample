@@ -104,8 +104,8 @@ namespace WindowsFormsApplication1
 
         public void StartValidate()
         {
-            Random r = new Random();
-            
+            Random r = new Random(1);
+
             timeElapsed = new System.Diagnostics.Stopwatch();
 
             timeElapsed.Start();
